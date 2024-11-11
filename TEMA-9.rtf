@@ -1,0 +1,210 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri-Bold;}{\f1\fnil\fcharset0 Calibri;}{\f2\fnil\fcharset0 Arial-BoldMT;}}
+{\colortbl ;\red0\green0\blue0;\red89\green52\blue148;\red255\green255\blue0;\red0\green255\blue255;\red0\green77\blue187;\red255\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sl240\slmult1\qj\b\f0\fs22\lang22 TEMA 09- Conex\'e3o com o banco de dados\par
+\b0\f1 Vamos agora aprender uma das fun\'e7\'f5es mais importante de todas as linguagens de programa\'e7\'e3o, podemos at\'e9 colocar como o ponto central de qual tipo de linguagem, \'e9 a conex\'e3o com o banco de dados, vamos entender e aprender sobre a linha entre a base de dados com o PHP.\par
+\'c9 muito importante, refor\'e7ar que o PHP \'e9 uma das linguagens mais seguras em quest\'e3o de conex\'e3o com o banco de dados, sendo assim \'e9 agora que vamos codificar o PHP e com a base de dados.\par
+Ap\'f3s criar o sistema WEB usando a linguagem de programa\'e7\'e3o PHP, devemos selecionar um provedor web para hospedar a nossa base de dados. Este servi\'e7o que \cf1 chamamos de provedor, tem v\'e1rios tipos de SGBD, e a\'ed vamos escolher o MySQL.\par
+\cf2\b\f2\par
+9.1 \f0 Introdu\'e7\'e3o de tipos de SGBD\par
+\cf1\b0\f1 SGBD \'e9 uma \highlight3 sigla de sistema de gerenciamento de banco de dados\highlight0 , toda linguagem de programa\'e7\'e3o precisa ter acesso ao banco de dados, ent\'e3o precisamos ter um SGBD que \'e9 o gerenciador da base de dados, nesse tema vamos falar do MySQL, um SGBD usado para as grandes redes de computador WEB.\par
+O MySQL \'e9 recomendado para trabalhar com o PHP, por ser \highlight3 open source\highlight0 , \highlight3 e conectividade mais leve e segura. \highlight0 F\cf0 undamental na manipula\'e7\'e3o e organiza\'e7\'e3o de dados em uma variedade de aplica\'e7\'f5es de\par
+software. \'c9 importante entender que diferentes tipos de SGBDs est\'e3o dispon\'edveis para atender a diferentes necessidades e requisitos de aplica\'e7\'e3o. O MySQL \'e9 um desses SGBDs populares, conhecido por sua confiabilidade e ampla ado\'e7\'e3o em ambientes de rede e desenvolvimento web.\par
+\ul\b O MySQL \'e9 um SGBD de c\'f3digo aberto que oferece uma plataforma s\'f3lida para armazenar e gerenciar dados em grandes redes de computadores,\ulnone\b0  especialmente quando combinado com a linguagem de programa\'e7\'e3o PHP. Aqui est\'e3o algumas caracter\'edsticas not\'e1veis que tornam o MySQL uma escolha preferida para muitos desenvolvedores e empresas:\par
+\highlight4\b Open Source\highlight0\b0 : O MySQL \'e9 distribu\'eddo sob a \ul\b licen\'e7a de c\'f3digo aberto\ulnone\b0 , o que significa que \'e9 \highlight3 gratuito para uso e modifica\'e7\'f5es\highlight0 . Isso o torna acess\'edvel a uma ampla variedade de desenvolvedores e organiza\'e7\'f5es, sem a necessidade de altos custos de licenciamento.\par
+\highlight4\b Conectividade Leve e Segura\highlight0\b0 : O MySQL oferece uma conex\'e3o segura e eficiente com a linguagem de programa\'e7\'e3o PHP e outras linguagens. Isso \'e9 crucial para garantir que os dados sejam transmitidos e armazenados com seguran\'e7a, especialmente em aplica\'e7\'f5es web que lidam com informa\'e7\'f5es sens\'edveis de escalar conforme a demanda. Isso o torna adequado para aplica\'e7\'f5es que \highlight3 podem crescer rapidamente e exigir um SGBD robusto para lidar com grandes volumes de dados e solicita\'e7\'f5es simult\'e2neas.\highlight0\par
+\highlight4\b Comunidade Ativa\highlight0\b0 : Devido \'e0 sua natureza de c\'f3digo aberto, o MySQL tem uma comunidade de desenvolvedores ativa. Isso resulta em atualiza\'e7\'f5es regulares, corre\'e7\'f5es de seguran\'e7a e suporte dispon\'edvel por meio de f\'f3runs e recursos online.\par
+Al\'e9m disso, o MySQL tamb\'e9m oferece uma variedade de recursos avan\'e7ados que o tornam altamente flex\'edvel e adapt\'e1vel a v\'e1rias aplica\'e7\'f5es. Isso inclui \highlight4\b suporte a transa\'e7\'f5es ACID (Atomicidade, Consist\'eancia, Isolamento e Durabilidade)\highlight0\b0 , replica\'e7\'e3o de dados para alta disponibilidade, suporte a v\'e1rias linguagens de programa\'e7\'e3o, incluindo Python, Java e C++, e uma ampla gama de op\'e7\'f5es de armazenamento de dados, como tabelas InnoDB e MyISAM.\par
+No entanto, \'e9 importante \ul\b notar que o MySQL n\'e3o \'e9 a \'fanica op\'e7\'e3o dispon\'edvel quando se trata de SGBDs\ulnone\b0 . Existem outros sistemas populares, \ul como PostgreSQL, Oracle, SQL Server e MongoDB\ulnone , cada um com suas pr\'f3prias vantagens e desvantagens, dependendo dos requisitos espec\'edficos do projeto.\par
+Em resumo, o MySQL \'e9 um SGBD amplamente utilizado, conhecido por sua confiabilidade, desempenho e compatibilidade com PHP, tornando-o uma escolha s\'f3lida para aplica\'e7\'f5es web em grande escala. \'c0 medida que continuamos a explorar os detalhes e as capacidades dos SGBDs, \'e9 essencial considerar cuidadosamente qual SGBD \'e9 mais adequado para cada caso de uso, a fim de garantir um armazenamento e gerenciamento eficazes de dados em projetos de desenvolvimento de software.\par
+\par
+\b RESUMO:\par
+\b0 O tema "Conex\'e3o com o banco de dados" em desenvolvimento back-end \'e9 crucial para compreender o funcionamento dos sistemas que manipulam informa\'e7\'f5es. \'c9 destacado o uso do PHP como uma linguagem segura para conectar-se a bancos de dados, com \'eanfase no MySQL devido \'e0 sua popularidade, c\'f3digo aberto e conex\'e3o leve e segura. O texto apresenta uma vis\'e3o geral dos Sistemas de Gerenciamento de Banco de Dados (SGBDs) e destaca o MySQL como um SGBD amplamente utilizado para aplica\'e7\'f5es web. Tamb\'e9m s\'e3o apresentados exemplos pr\'e1ticos de\par
+como criar uma base de dados, realizar opera\'e7\'f5es CRUD (Create, Read, Update, Delete) e implementar autentica\'e7\'e3o de login e senha em PHP. Essas habilidades s\'e3o fundamentais para desenvolvedores back-end que desejam criar sistemas web robustos e seguros.\line\par
+\line\cf5\highlight4\b / Conex\'e3o com o banco de dados usando PDO\par
+\highlight0 try \{\par
+    $pdo = new PDO($dsn, $username, $password);\par
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\par
+    $conexao_msg = "Conex\'e3o bem-sucedida!";\par
+\} catch (PDOException $e) \{\par
+    die("Erro ao conectar-se ao banco de dados: " . $e->getMessage());\par
+\}\line\cf0\b0\line\cf1 Este trecho de c\'f3digo \'e9 respons\'e1vel por estabelecer uma conex\'e3o com o banco de dados utilizando PDO (PHP Data Objects), uma interface para acessar bancos de dados no PHP.\par
+\par
+Aqui est\'e1 uma explica\'e7\'e3o linha por linha:\par
+\par
+1. \b `try \{`\b0 :\b  \b0 Este bloco marca o in\'edcio de um bloco "try", onde o c\'f3digo que pode gerar exce\'e7\'f5es \'e9 colocado.\par
+\par
+2. \b `$pdo = new PDO($dsn, $username, $password);`\b0 : Aqui, uma nova inst\'e2ncia da classe `PDO` \'e9 criada. Esta classe representa a conex\'e3o com o banco de dados. Os par\'e2metros `$dsn`, `$username` e `$password` s\'e3o passados para o construtor da classe `PDO`. `$dsn` cont\'e9m informa\'e7\'f5es sobre o tipo de banco de dados, o host e o nome do banco de dados. `$username` e `$password` s\'e3o as credenciais de acesso ao banco de dados.\par
+\par
+3. `$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);`: Esta linha configura o atributo de modo de erro do objeto `PDO`. Configuramos para que o PDO lance exce\'e7\'f5es (PDOException) quando ocorrerem erros no banco de dados. Isso facilita a detec\'e7\'e3o e o tratamento de erros no c\'f3digo.\par
+\par
+4. `$conexao_msg = "Conex\'e3o bem-sucedida!";`: Esta linha atribui a mensagem "Conex\'e3o bem-sucedida!" \'e0 vari\'e1vel `$conexao_msg`. Esta mensagem ser\'e1 usada posteriormente para indicar que a conex\'e3o com o banco de dados foi estabelecida com sucesso.\par
+\par
+5. `\} catch (PDOException $e) \{`: Este bloco marca o in\'edcio do bloco "catch", que captura exce\'e7\'f5es lan\'e7adas dentro do bloco "try".\par
+\par
+6. `die("Erro ao conectar-se ao banco de dados: " . $e->getMessage());`: Se ocorrer um erro durante a conex\'e3o com o banco de dados, este trecho ser\'e1 executado. A fun\'e7\'e3o `die()` interrompe a execu\'e7\'e3o do script e exibe uma mensagem de erro. Neste caso, exibimos a mensagem "Erro ao conectar-se ao banco de dados:" seguida pela mensagem de erro espec\'edfica capturada pelo objeto `PDOException`.\par
+\par
+Em resumo, este trecho de c\'f3digo tenta estabelecer uma conex\'e3o com o banco de dados usando PDO. Se a conex\'e3o for bem-sucedida, uma mensagem indicando sucesso \'e9 armazenada na vari\'e1vel `$conexao_msg`. Se ocorrer um erro durante a conex\'e3o, uma mensagem de erro \'e9 exibida e a execu\'e7\'e3o do script \'e9 interrompida.\par
+\par
+\cf5\highlight4\b /Fun\'e7\'e3o para apresentar registros da tabela\par
+\highlight0 function displayCadastros($conn) \{\par
+    $sql = "SELECT * FROM cadastro";\par
+    $stmt = $conn->prepare($sql);\par
+    $stmt->execute();\par
+\par
+    echo "<table>";\par
+    echo "<tr><th>ID</th><th>Nome</th><th>Celular</th><th>Idade</th><th>G\'eanero</th><th>A\'e7\'f5es</th></tr>";\par
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) \{\par
+        echo "<tr>";\par
+        echo "<td>\{$row['id']\}</td>";\par
+        echo "<td>\{$row['nome']\}</td>";\par
+        echo "<td>\{$row['celular']\}</td>";\par
+        echo "<td>\{$row['idade']\}</td>";\par
+        echo "<td>\{$row['genero']\}</td>";\par
+        echo "<td>";\par
+        echo "<button style='margin-right: 5px;' onclick='openModal(\\"\{$row['id']\}\\", \\"\{$row['nome']\}\\", \\"\{$row['celular']\}\\", \\"\{$row['idade']\}\\", \\"\{$row['genero']\}\\")'>Editar</button>";\par
+        echo "<form method='post' action='index.php'>";\par
+        echo "<input type='hidden' name='delete_id' value='\{$row['id']\}'>";\par
+        echo "<button type='submit' name='delete'>Excluir</button>";\par
+        echo "</form>";\par
+        echo "</td>";\par
+        echo "</tr>";\par
+    \}\par
+    echo "</table>";\par
+\}\par
+\par
+\cf1\b0 Essa fun\'e7\'e3o `displayCadastros($conn)` \'e9 respons\'e1vel por exibir os registros da tabela `cadastro` em formato de tabela HTML, junto com bot\'f5es "Editar" e formul\'e1rios para exclus\'e3o de registros. Vou explicar linha por linha:\par
+\par
+\b 1. Sele\'e7\'e3o de Dados SQL:\par
+\b0    - `$sql = "SELECT * FROM cadastro";`: Define uma instru\'e7\'e3o SQL para selecionar todos os campos da tabela `cadastro`.\par
+\par
+\b 2. Prepara\'e7\'e3o e Execu\'e7\'e3o da Consulta:\par
+\b0    - `$stmt = $conn->prepare($sql);`: Prepara a consulta SQL para execu\'e7\'e3o, evitando inje\'e7\'e3o de SQL.\par
+   - `$stmt->execute();`: Executa a consulta preparada.\par
+\par
+\b 3. Cria\'e7\'e3o da Tabela HTML:\par
+\b0    - `echo "<table>";`: Inicia a tag `<table>` para come\'e7ar a estrutura da tabela HTML.\par
+   - `echo "<tr><th>ID</th><th>Nome</th><th>Celular</th><th>Idade</th><th>G\'eanero</th><th>A\'e7\'f5es</th></tr>";`: Cria a primeira linha da tabela, que cont\'e9m os cabe\'e7alhos das colunas.\par
+\par
+\b 4. Loop para Exibi\'e7\'e3o dos Registros:\par
+\b0    - `while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) \{`: Inicia um loop para percorrer os resultados da consulta.\par
+   - `echo "<tr>";`: Inicia uma nova linha na tabela HTML para cada registro.\par
+   - `echo "<td>\{$row['id']\}</td>";`: Exibe o valor do campo `id` na coluna da tabela.\par
+   - `echo "<td>\{$row['nome']\}</td>";`: Exibe o valor do campo `nome` na coluna da tabela.\par
+   - `echo "<td>\{$row['celular']\}</td>";`: Exibe o valor do campo `celular` na coluna da tabela.\par
+   - `echo "<td>\{$row['idade']\}</td>";`: Exibe o valor do campo `idade` na coluna da tabela.\par
+   - `echo "<td>\{$row['genero']\}</td>";`: Exibe o valor do campo `genero` na coluna da tabela.\par
+\par
+\b 5. Bot\'f5es de A\'e7\'e3o:\par
+\b0    - `echo "<td>";`: Inicia uma c\'e9lula para os bot\'f5es de a\'e7\'e3o.\par
+   - `echo "<button style='margin-right: 5px;' onclick='openModal(...)'">Editar</button>";`: Cria um bot\'e3o "Editar" que chama uma fun\'e7\'e3o JavaScript `openModal()` com os dados do registro.\par
+   - `echo "<form method='post' action='index.php'>";`: Inicia um formul\'e1rio para exclus\'e3o.\par
+   - `echo "<input type='hidden' name='delete_id' value='\{$row['id']\}'>";`: Cria um campo oculto para armazenar o ID do registro a ser exclu\'eddo.\par
+   - `echo "<button type='submit' name='delete'>Excluir</button>";`: Cria um bot\'e3o de envio para excluir o registro.\par
+   - `echo "</form>";`: Fecha o formul\'e1rio.\par
+   - `echo "</td>";`: Fecha a c\'e9lula.\par
+\par
+\b 6. Fechamento da Tabela HTML:\par
+\b0    - `echo "</tr>";`: Fecha a linha atual da tabela.\par
+   - `echo "</table>";`: Fecha a tag `<table>`, finalizando a estrutura da tabela HTML.\par
+\par
+Essa fun\'e7\'e3o completa gera uma tabela HTML com os registros da tabela `cadastro`, cada um com bot\'f5es "Editar" e formul\'e1rios para exclus\'e3o de registro.\par
+\par
+\highlight6\b ATEN\'c7\'c3O:\par
+\highlight0\par
+\cf5 <button style='margin-right: 5px;' onclick='openModal(\\"\{$row['id']\}\\", \\"\{$row['nome']\}\\", \\"\{$row['celular']\}\\", \\"\{$row['idade']\}\\", \\"\{$row['genero']\}\\")'>Editar</button>\par
+\cf1\par
+\b0 Esta linha gera um bot\'e3o "Editar" dentro de cada c\'e9lula da coluna "A\'e7\'f5es" da tabela HTML. Vamos dividir e explicar cada parte:\par
+\par
+<button>: Este \'e9 o elemento HTML que define um bot\'e3o.\par
+\par
+style='margin-right: 5px;': Este \'e9 um atributo de estilo inline que define uma margem \'e0 direita de 5 pixels para o bot\'e3o. Isso garante um pequeno espa\'e7o entre o bot\'e3o "Editar" e o bot\'e3o "Excluir".\par
+\par
+onclick='openModal(...)': Este \'e9 o evento onclick que \'e9 acionado quando o bot\'e3o \'e9 clicado. Ele chama a fun\'e7\'e3o JavaScript openModal() com os detalhes do registro, como ID, nome, celular, idade e g\'eanero.\par
+\par
+\\"\{$row['id']\}\\", \\"\{$row['nome']\}\\", \\"\{$row['celular']\}\\", \\"\{$row['idade']\}\\", \\"\{$row['genero']\}\\": Este \'e9 o conte\'fado que \'e9 passado como argumentos para a fun\'e7\'e3o openModal(). \b Est\'e1 usando interpola\'e7\'e3o de strings para inserir os valores din\'e2micos de cada campo do registro\b0  ($row['id'], $row['nome'], $row['celular'], $row['idade'], $row['genero']). Os valores s\'e3o envolvidos em aspas duplas (\\") para garantir que sejam interpretados corretamente na fun\'e7\'e3o JavaScript.\par
+\par
+Editar: Este \'e9 o texto exibido no bot\'e3o. Quando clicado, ele aciona a fun\'e7\'e3o JavaScript openModal().\par
+\par
+Resumindo, esta linha de c\'f3digo gera um bot\'e3o "Editar" com estilo, que, quando clicado, chama a fun\'e7\'e3o openModal() do JavaScript com os detalhes do registro como argumentos, permitindo a edi\'e7\'e3o do registro correspondente.\par
+\par
+\highlight6\b ATEN\'c7\'c3O:\par
+\par
+\highlight0\b0 A inje\'e7\'e3o de SQL \'e9 uma t\'e9cnica de explora\'e7\'e3o de vulnerabilidades em sistemas que utilizam consultas SQL para interagir com um banco de dados. Ela ocorre quando um atacante consegue inserir comandos SQL maliciosos em campos de entrada de dados de uma aplica\'e7\'e3o, como formul\'e1rios da web, para manipular o comportamento das consultas SQL executadas pelo sistema.\par
+\par
+Aqui est\'e1 um exemplo simplificado de inje\'e7\'e3o de SQL:\par
+\par
+Suponha que tenhamos um formul\'e1rio de login em um site com a seguinte consulta SQL para verificar as credenciais do usu\'e1rio:\par
+\par
+\b ```sql\par
+SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'\par
+```\par
+\b0\par
+Se um usu\'e1rio mal-intencionado inserir o seguinte texto no campo de usu\'e1rio:\par
+\par
+\b ```\par
+' OR '1' = '1\par
+```\par
+\b0\par
+A consulta SQL resultante seria:\par
+\par
+\b ```sql\par
+SELECT * FROM usuarios WHERE usuario = '' OR '1' = '1' AND senha = '$senha'\par
+```\par
+\b0\par
+O trecho `'1' = '1'` sempre ser\'e1 verdadeiro, ent\'e3o a consulta retornar\'e1 todos os registros da tabela `usuarios`, ignorando a necessidade de uma senha v\'e1lida. Isso pode permitir que o atacante acesse contas de usu\'e1rios sem autoriza\'e7\'e3o.\par
+\par
+Para evitar esse tipo de ataque, \'e9 fundamental utilizar t\'e9cnicas de prepara\'e7\'e3o de consultas e vincula\'e7\'e3o de par\'e2metros, como \'e9 feito com a fun\'e7\'e3o `prepare()` e `bindParam()` ou `bindValue()` do PDO em PHP.\par
+\par
+Essas fun\'e7\'f5es garantem que os dados inseridos nas consultas SQL sejam tratados como valores e n\'e3o como parte da pr\'f3pria consulta, o que impede que comandos SQL maliciosos sejam executados. O sistema interpreta esses valores apenas como dados a serem consultados e n\'e3o como parte da estrutura da consulta SQL.\par
+\par
+Portanto, ao usar a prepara\'e7\'e3o de consultas e a vincula\'e7\'e3o de par\'e2metros, como no exemplo fornecido, podemos prevenir com sucesso a inje\'e7\'e3o de SQL em nosso aplicativo.\par
+\par
+\highlight4\b ATIVIDADES:\par
+\highlight0\b0\par
+\cf0 1. O que significa a sigla SGBD?\par
+2. Qual linguagem de programa\'e7\'e3o \'e9 mencionada como sendo compat\'edvel com o MySQL?\par
+3. Como iniciar o Xampp para trabalhar com o MySQL?\par
+4. Qual \'e9 o m\'e9todo de envio de dados usado em um formul\'e1rio HTML para conex\'e3o com a base de dados?\par
+5. O que \'e9 uma transa\'e7\'e3o ACID?\par
+6. Qual \'e9 a finalidade do comando "CREATE" em um SGBD?\par
+7. Qual \'e9 a fun\'e7\'e3o da criptografia MD5 no contexto de autentica\'e7\'e3o de login?Qual \'e9 a fun\'e7\'e3o da criptografia MD5 no contexto de autentica\'e7\'e3o de login?\par
+8. Como a comunidade ativa de desenvolvedores beneficia o MySQL como um SGBD de c\'f3digo aberto?\par
+9. Por que \'e9 relevante destacar a seguran\'e7a na conex\'e3o com banco de dados ao usar PHP?\par
+10. Quais s\'e3o os principais desafios e considera\'e7\'f5es ao escolher entre diferentes SGBDs, como MySQL, PostgreSQL, Oracle e MongoDB?\cf1\par
+\par
+\cf5\b 1. SGBD significa Sistema de Gerenciamento de Banco de Dados. \'c9 um software que permite aos usu\'e1rios interagir com o banco de dados, gerenciando o armazenamento, a organiza\'e7\'e3o e o acesso aos dados de forma eficiente e segura.\par
+\par
+2. A linguagem de programa\'e7\'e3o mencionada como sendo compat\'edvel com o MySQL \'e9 o PHP.\par
+\par
+3. Para iniciar o Xampp e trabalhar com o MySQL, voc\'ea precisa seguir estes passos:\par
+   - Abra o painel de controle do Xampp.\par
+   - Inicie os servi\'e7os do Apache e MySQL.\par
+   - Acesse o phpMyAdmin atrav\'e9s do navegador para gerenciar o MySQL.\par
+\par
+4. O m\'e9todo de envio de dados usado em um formul\'e1rio HTML para conex\'e3o com a base de dados \'e9 geralmente o m\'e9todo POST.\par
+\par
+5. Uma transa\'e7\'e3o ACID \'e9 um conjunto de propriedades que garantem que as opera\'e7\'f5es de banco de dados sejam executadas de forma consistente e confi\'e1vel. ACID \'e9 um acr\'f4nimo para Atomicidade, Consist\'eancia, Isolamento e Durabilidade. Isso significa que as transa\'e7\'f5es s\'e3o at\'f4micas (ou seja, ou s\'e3o completadas com sucesso ou n\'e3o s\'e3o realizadas de forma alguma), consistentes (mant\'eam a integridade dos dados), isoladas (as transa\'e7\'f5es n\'e3o interferem umas com as outras) e dur\'e1veis (as altera\'e7\'f5es s\'e3o permanentes, mesmo em caso de falha do sistema).\par
+\par
+6. O comando "CREATE" em um SGBD \'e9 utilizado para criar objetos dentro do banco de dados, como tabelas, \'edndices, vis\'f5es, procedimentos armazenados, entre outros. Por exemplo, "CREATE TABLE" \'e9 usado para criar uma nova tabela no banco de dados.\par
+\par
+7. A fun\'e7\'e3o da criptografia MD5 no contexto de autentica\'e7\'e3o de login \'e9 converter uma senha em uma sequ\'eancia de caracteres de 128 bits, que geralmente \'e9 armazenada no banco de dados. Quando um usu\'e1rio tenta fazer login, a senha inserida \'e9 criptografada usando o algoritmo MD5 e comparada com a senha armazenada. Se as sequ\'eancias de caracteres forem id\'eanticas, o login \'e9 considerado v\'e1lido. No entanto, MD5 n\'e3o \'e9 mais considerado seguro para criptografar senhas devido \'e0s suas vulnerabilidades conhecidas.\par
+\par
+8. A comunidade ativa de desenvolvedores beneficia o MySQL como um SGBD de c\'f3digo aberto de v\'e1rias maneiras:\par
+   - Fornecendo suporte e recursos online para os usu\'e1rios.\par
+   - Contribuindo com atualiza\'e7\'f5es regulares e corre\'e7\'f5es de seguran\'e7a.\par
+   - Desenvolvendo plugins e extens\'f5es para estender a funcionalidade do MySQL.\par
+   - Criando documenta\'e7\'e3o e tutoriais para ajudar os desenvolvedores a utilizar o MySQL de forma eficaz.\par
+\par
+9. \'c9 relevante destacar a seguran\'e7a na conex\'e3o com banco de dados ao usar PHP porque isso pode prevenir ataques de inje\'e7\'e3o de SQL, que s\'e3o uma das vulnerabilidades mais comuns em aplica\'e7\'f5es web. Uma conex\'e3o segura com o banco de dados, juntamente com o uso de t\'e9cnicas de prepara\'e7\'e3o de consultas e vincula\'e7\'e3o de par\'e2metros, pode proteger contra esse tipo de ataque, garantindo que os dados inseridos pelos usu\'e1rios sejam tratados de forma segura.\par
+\par
+10. Os principais desafios e considera\'e7\'f5es ao escolher entre diferentes SGBDs, como MySQL, PostgreSQL, Oracle e MongoDB, incluem:\par
+    - Desempenho e escalabilidade.\par
+    - Recursos e funcionalidades espec\'edficas oferecidas por cada SGBD.\par
+    - Suporte e comunidade de desenvolvedores.\par
+    - Custos de licenciamento e suporte.\par
+    - Requisitos de seguran\'e7a e conformidade.\par
+    - Integra\'e7\'e3o com outras tecnologias e ferramentas.\par
+    - Tipo de dados e modelos de armazenamento oferecidos pelo SGBD.\par
+}
+ 

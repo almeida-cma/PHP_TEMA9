@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS estoque (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_produto VARCHAR(255) NOT NULL,
+    quantidade_min INT NOT NULL,
+    quantidade_atual INT NOT NULL
+);
+
+
+$servername = "localhost";
+$port = 7306;
+$username = "root";
+$password = "";
+$dbname = "banco_de_dados";
